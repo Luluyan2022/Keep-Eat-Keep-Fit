@@ -1,0 +1,23 @@
+<h1>Profile Page</h1>
+
+{{#if userInsession}}
+<h2>Hi, {{ userInsession.username }}!</h2>
+<p>Welcome you back!</p>
+<div>
+   
+        <a href="/profileDetails">Your profile</a>
+
+        <h3>History Review:</h3>
+        <form action="/mealDiaries" method="get">
+            <label for="history">Choose a date:</label>
+            <input type="date" id="historyDate" value="2023-01-01" min="2022-01-01"/>
+        </form>
+        
+        <a href="/mealDiaries/create">New Meal Diary</a>
+    
+</div>
+{{else}}
+  <p>Please login!</p>
+{{/if}}
+
+<script src="/js/script.js"></script>

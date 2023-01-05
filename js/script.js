@@ -1,0 +1,1 @@
+historyDate.max = new Date().toLocaleDateString();
